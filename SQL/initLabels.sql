@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS labels (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    picture_id INTEGER,
+    name VARCHAR(100) NOT NULL,
+    prob INTEGER NOT NULL,
+    FOREIGN KEY (picture_id) REFERENCES pictures(id) ON DELETE CASCADE
+);
